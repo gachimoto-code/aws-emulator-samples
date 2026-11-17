@@ -13,6 +13,7 @@ cp .env.example .env   # ~/.aws/emulator/9297/ のパスを自分の環境に合
 npm install
 npm run check:ecs          # ECS の検証
 npm run check:cloudfront   # CloudFront + S3 の検証
+npm run check:lambda       # Lambda の検証
 ```
 
 エミュレータはインメモリなので、再起動すれば作ったリソースは消え、
@@ -49,3 +50,13 @@ npm run check:cloudfront   # CloudFront + S3 の検証
 → フロントエンドは「ファイル配置は本物、CDN 配信は形だけ」。
 ECS の「タスクが起動しない」と合わせて、どちらも現時点では
 "載せるだけの検証" が中心になる。
+
+### Lambda (`lambda-check.js`) — 例外的に「本当に動く」
+
+- 関数の作成（zip アップロード）ができ、状態は Pending → Active に遷移する
+- **Invoke するとハンドラが実際に実行され、戻り値が返ってくる**
+  （python3.12 / nodejs20.x の両方で、イベントの echo を含む応答を確認）
+- ECS と違い、こちらはコントロールプレーンだけでなく実行まで実働する
+
+→ バックエンドを Lambda 関数として書く構成なら、このエミュレータ上でも
+ローカルで実行検証ができる。
