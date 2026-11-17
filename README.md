@@ -13,8 +13,8 @@ AWS公式のローカルエミュレータ **AWS Emulator**（[aws/aws-emulator]
 | フォルダ | 内容 | 使うAWSサービス | 状態 |
 |---|---|---|---|
 | [notes-app](notes-app/) | ノートアプリ（CRUD + 添付ファイル） | DynamoDB / S3 | ✅ 実装・検証済み |
-| files-app | ファイル管理アプリ | S3 | 未作成 |
-| queue-app | タスクキューアプリ | SQS | 未作成 |
+| [files-app](files-app/) | ファイル管理アプリ | S3 | ✅ 実装・検証済み |
+| [queue-app](queue-app/) | タスクキューアプリ | SQS | ✅ 実装・検証済み |
 
 ## 事前準備: AWS Emulator の起動
 
