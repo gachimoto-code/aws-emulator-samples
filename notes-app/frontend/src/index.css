@@ -1,0 +1,23 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color: #1a1a1a; }
+.layout { display: flex; min-height: 100vh; }
+.sidebar { width: 300px; border-right: 1px solid #ddd; padding: 16px; background: #fafafa; }
+.sidebar h1 { font-size: 20px; margin: 0 0 4px; }
+.subtitle { color: #666; font-size: 12px; margin: 0 0 12px; }
+.note-list { list-style: none; padding: 0; margin: 16px 0 0; }
+.note-list li { padding: 8px; border-radius: 6px; cursor: pointer; }
+.note-list li:hover { background: #eee; }
+.note-list li.active { background: #dde8ff; }
+.note-title { font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.note-meta { color: #777; font-size: 12px; }
+.editor { flex: 1; padding: 24px; display: flex; flex-direction: column; gap: 12px; }
+.title-input { font-size: 20px; padding: 8px; border: 1px solid #ccc; border-radius: 6px; }
+.body-input { flex: 1; min-height: 240px; padding: 8px; border: 1px solid #ccc; border-radius: 6px; font: inherit; }
+.actions { display: flex; gap: 8px; }
+button { padding: 6px 14px; border: 1px solid #bbb; border-radius: 6px; background: #fff; cursor: pointer; }
+button:hover { background: #f0f0f0; }
+button.danger { color: #b00020; border-color: #e0a3ab; }
+.attachment { border-top: 1px solid #eee; padding-top: 12px; }
+.attachment h2 { font-size: 14px; }
+.error { color: #b00020; font-size: 13px; }
+.empty { color: #777; }
