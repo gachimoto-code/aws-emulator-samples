@@ -16,6 +16,7 @@ AWS公式のローカルエミュレータ **AWS Emulator**（[aws/aws-emulator]
 | [files-app](files-app/) | ファイル管理アプリ | S3 | ✅ 実装・検証済み |
 | [queue-app](queue-app/) | タスクキューアプリ | SQS | ✅ 実装・検証済み |
 | [deploy-check](deploy-check/) | ECS / Lambda / CloudFront に「載せる」検証スクリプト | ECS / EC2 / Lambda / S3 / CloudFront | ✅ 検証済み（ECS実行・CDN配信は不可、Lambdaは実行可） |
+| [genu-app](genu-app/) | GenU風チャット（認証付きAIチャットの構成を再現） | Cognito / API Gateway / Lambda / DynamoDB / Bedrock | ✅ デプロイ・疎通確認済み（Bedrockはダミー応答） |
 
 ## 事前準備: AWS Emulator の起動
 
